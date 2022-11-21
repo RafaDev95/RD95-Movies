@@ -51,7 +51,10 @@
 
 * Clone o projeto: ``` git clone https://github.com/RafaDev95/RD95-Movies.git ```
 
-* Entra na pasta *server* e use comando ```yarn``` para baixar as dependências necessárias.
+* Antes de tudo é necessário criar uma conta no [MongoDB](https://www.mongodb.com/), criar seu cluster e credenciais para fazer a conexão que é atraves de uma URL.
+* Essa url do MongoDB é a variável de ambiente que está no app.ts "MONGODB_URL_CONNECTION"
+
+* Entre na pasta *server* e use comando ```yarn``` para baixar as dependências necessárias.
 * Repita o processo na pasta *client*
 * Comando para iniciar tanto client quanto server: ```yarn dev```
 
