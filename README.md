@@ -76,3 +76,7 @@
 * [Tsc-Watch](https://www.npmjs.com/package/tsc-watch)
 * [DotEnv](https://www.npmjs.com/package/dotenv)
 * [TypeScript](https://www.typescriptlang.org/)
+
+### Considerações
+* Sempre busco deixar o código mais "claro" possível para evitar comentários. Exceto em alguns casos onde a lógica é meia complexa ou algo do tipo(Fiz isso no middleware de validação com Joi)
+* Quando acessar o projeto pelo link disponibilizado, ao avançar de página para buscar novos filmes está tendo uma certa lentidão. Vi que é devido onde foi hospedado e caso não consiga corrigir essa "lentidão" irei procurar outra hospedagem.
