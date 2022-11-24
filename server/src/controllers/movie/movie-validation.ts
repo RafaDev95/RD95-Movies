@@ -6,7 +6,9 @@ const movieValidate = Joi.array<Movie>().items({
   image: Joi.string().required(),
   description: Joi.string().required(),
   director: Joi.string().required(),
-  producer: Joi.string().required()
+  producer: Joi.string().required(),
+  release_date: Joi.string().required(),
+  rt_score: Joi.string().required()
 })
 
 export default movieValidate

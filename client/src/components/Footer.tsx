@@ -2,7 +2,10 @@ import { Logo } from './'
 
 const Footer = () => {
   return (
-    <div className="flex flex-col space-y-8 items-center justify-between w-full mt-24 md:flex-row md:items-start md:space-y-0">
+    <div
+      className="flex flex-col space-y-8 items-center justify-between w-full mt-24 
+    md:flex-row md:items-start md:space-y-0"
+    >
       <div>
         <Logo />
 

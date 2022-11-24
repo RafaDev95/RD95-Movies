@@ -2,6 +2,7 @@ import { Button } from './'
 import Image from 'next/image'
 import { ICard } from 'interfaces'
 import { limitStringLength } from 'utils/limitStringLength'
+import { useRouter } from 'next/router'
 
 type Props = {
   card: ICard
@@ -9,9 +10,11 @@ type Props = {
 }
 
 const Card = ({
-  card: { image, title, description, director, producer },
+  card: { _id, image, title, description, director, producer },
   artist
 }: Props) => {
+  const route = useRouter()
+
   return (
     <>
       {artist ? (
@@ -25,7 +28,17 @@ const Card = ({
           </div>
         </div>
       ) : (
-        <div className="bg-white flex flex-col shadow-xl drop-shadow-xl rounded-xl overflow-hidden cursor-pointer">
+        <div
+          className="bg-white flex flex-col shadow-xl drop-shadow-xl `
+        rounded-xl overflow-hidden cursor-pointer"
+          role="button"
+          onClick={() =>
+            route.push({
+              pathname: `/movie/${title.split(' ').join('-')}`,
+              query: { _id }
+            })
+          }
+        >
           <div className="relative w-full h-[250px] ">
             <Image
               src={image}

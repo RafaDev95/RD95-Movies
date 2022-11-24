@@ -23,6 +23,14 @@ const movieSchema = new Schema<Movie>(
     producer: {
       type: String,
       required: true
+    },
+    release_date: {
+      type: String,
+      required: true
+    },
+    rt_score: {
+      type: String,
+      required: true
     }
   },
   { timestamps: true }

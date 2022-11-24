@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import { Sidebar, Main } from 'components'
+import { Main, Layout } from 'components'
 import { fetchSavedMovies } from './api'
 import { MovieResponse } from 'interfaces'
 import { setMovies } from 'redux/slices/movieSlice'
@@ -18,19 +17,9 @@ const Home = ({ data }: Props) => {
   }, [])
 
   return (
-    <div className="min-h-full flex items-center justify-center p-2 bg-slate-200">
-      <Head>
-        <title>RD95 Movies</title>
-        <link rel="icon" href="/film-icon.png" />
-      </Head>
-      <main
-        className="flex max-w-[1500px] w-full justify-between
-      gap-4 px-2 py-10 text-center bg-white rounded-3xl"
-      >
-        <Sidebar />
-        <Main />
-      </main>
-    </div>
+    <Layout>
+      <Main />
+    </Layout>
   )
 }
 

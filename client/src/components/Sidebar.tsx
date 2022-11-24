@@ -39,12 +39,12 @@ const Sidebar = () => {
     <>
       {isActive && (
         <aside
-          className="fixed top-2 h-screen bg-white z-50 drop-shadow-xl shadow-lg w-[250px] py-1 rounded-xl
+          className="fixed top-2 h-full bg-white z-50 drop-shadow-xl shadow-lg w-[250px] tracking-tighter py-1 rounded-xl
     lg:relative lg:bg-transparent lg:drop-shadow-none lg:shadow-none"
         >
-          <div className="w-full px-2 relative">
+          <div className="w-full px-2 relative pt-5">
             <button
-              className="absolute right-3 lg:hidden"
+              className="absolute top-7 right-3 lg:hidden"
               onClick={() => dispatch(toggleSidebar({ isActive: false }))}
             >
               <XMarkIcon className="w-6 h-6 hover:text-red-500" />

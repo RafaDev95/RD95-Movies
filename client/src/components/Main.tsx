@@ -4,15 +4,14 @@ import {
   ArtistsSection,
   AllMoviesSection,
   Navbar,
-  ScrollToTopButton,
-  Footer
+  ScrollToTopButton
 } from 'components'
 
 import { PlusIcon } from '@heroicons/react/24/outline'
 
 const Main = () => {
   return (
-    <main className="flex max-w-[1100px] flex-col items-center justify-around h-full w-full px-2">
+    <main className="flex flex-col items-center justify-around h-full w-full px-2">
       <Navbar />
 
       <div className="relative w-full md:h-[440px] h-[200px] rounded-xl overflow-hidden">
@@ -45,8 +44,8 @@ const Main = () => {
       <ArtistsSection />
 
       <AllMoviesSection />
+
       <ScrollToTopButton />
-      <Footer />
     </main>
   )
 }

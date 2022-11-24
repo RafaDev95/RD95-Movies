@@ -74,7 +74,7 @@ const AllMoviesSection = () => {
           </button>
         </div>
 
-        <Button onClick={fetchAndSaveGhibliMovies}>GetGhibliMovies</Button>
+        <Button onClick={fetchAndSaveGhibliMovies}>Get GhibliMovies</Button>
       </div>
 
       <Button
