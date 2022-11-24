@@ -51,7 +51,10 @@
 
 * Clone o projeto: ``` git clone https://github.com/RafaDev95/RD95-Movies.git ```
 
-* Entra na pasta *server* e use comando ```yarn``` para baixar as dependências necessárias.
+* Antes de tudo é necessário criar uma conta no [MongoDB](https://www.mongodb.com/), criar seu cluster e credenciais para fazer a conexão que é atraves de uma URL.
+* Essa url do MongoDB é a variável de ambiente que está no app.ts "MONGODB_URL_CONNECTION"
+
+* Entre na pasta *server* e use comando ```yarn``` para baixar as dependências necessárias.
 * Repita o processo na pasta *client*
 * Comando para iniciar tanto client quanto server: ```yarn dev```
 
@@ -76,3 +79,8 @@
 * [Tsc-Watch](https://www.npmjs.com/package/tsc-watch)
 * [DotEnv](https://www.npmjs.com/package/dotenv)
 * [TypeScript](https://www.typescriptlang.org/)
+
+### Considerações
+* Sempre busco deixar o código mais "claro" possível para evitar comentários. Exceto em alguns casos onde a lógica é meia complexa ou algo do tipo(Fiz isso no middleware de validação com Joi)
+* Quando acessar o projeto pelo link disponibilizado, ao avançar de página para buscar novos filmes está tendo uma certa lentidão. Vi que é devido onde foi hospedado e caso não consiga corrigir essa "lentidão" irei procurar outra hospedagem.
+* Optei por usar Redux Toolki por ficar muito melhor para escalar a aplicação depois.
