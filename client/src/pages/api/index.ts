@@ -2,7 +2,10 @@
 import axios from 'axios'
 
 const OwnAPI = axios.create({
-  baseURL: 'http://localhost:5000'
+  baseURL:
+    process.env.NEXT_PUBLIC_ENV === 'development'
+      ? 'http://localhost:5000'
+      : process.env.NEXT_PUBLIC_BASEURL
 })
 
 export const saveGhibliApiMoviesInMyDb = async (): Promise<string> => {

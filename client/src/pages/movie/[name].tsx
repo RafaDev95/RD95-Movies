@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 const Movie = () => {
   const router = useRouter()
   const queryName = router.query.name as string
-  const movieTitle = queryName.split('-').join(' ')
+  const movieTitle = queryName?.split('-').join(' ')
 
   return (
     <Layout pageTitle={`Watch ${movieTitle} Online`}>

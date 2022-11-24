@@ -56,7 +56,7 @@ const Card = ({
             </p>
             <div className="text-start pl-3 flex flex-col gap-2">
               <p className="font-medium text-sm" title={description}>
-                {description && description.length >= 300
+                {description && description?.length >= 300
                   ? limitStringLength(description, 300)
                   : description}
               </p>

@@ -84,7 +84,7 @@ const AllMoviesSection = () => {
         Show all
       </Button>
 
-      <CardList cards={movies} />
+      {movies && <CardList cards={movies} />}
 
       <div className="flex items-center w-fit bg-gray-200 rounded-lg p-1 gap-2 mx-auto mt-2">
         <button
@@ -94,7 +94,7 @@ const AllMoviesSection = () => {
         >
           <ChevronLeftIcon className="w-8 h-8 p-1" />
         </button>
-        {pagesQty.map((page) => (
+        {pagesQty?.map((page) => (
           <button
             key={page}
             className={`pagination-btns ${
