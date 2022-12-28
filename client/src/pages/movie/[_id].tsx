@@ -13,13 +13,7 @@ const MoviePage = ({ data }: Props) => {
     <Layout pageTitle={`Watch ${data?.title} Online`}>
       <div className=" flex flex-col gap-5 w-[950px]">
         <div className="flex w-full relative h-[400px] rounded-xl overflow-hidden">
-          <Image
-            fill
-            priority
-            src={data?.image}
-            alt="Movie cover"
-            // className="object-cover"
-          />
+          <Image fill priority src={data?.image} alt="Movie cover" />
         </div>
 
         <div className="bg-slate-100 rounded-xl h-60 flex items-center p-2">

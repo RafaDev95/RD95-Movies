@@ -26,22 +26,23 @@ const AllMoviesSection = () => {
     dispatch(setMovies(movies))
   }
 
-  // const fetchAndSaveGhibliMovies = async () => {
-  //   const response = await saveGhibliApiMoviesInMyDb()
+  const fetchAndSaveNewMovies = async () => {
+    // const response = await saveGhibliApiMoviesInMyDb()
 
-  //   console.log(response)
-
-  //   if (response === 'Movies already are saved') {
-  //     toast.success(response, {
-  //       icon: <BookmarkIcon className="w-5 h-6 text-yellow-300" />
-  //     })
-  //   } else {
-  //     toast.success(response)
-  //     setTimeout(() => {
-  //       window.location.reload()
-  //     }, 500)
-  //   }
-  // }
+    toast.success('These Movies have already been saved', {
+      icon: <BookmarkIcon className="w-5 h-6 text-yellow-300" />
+    })
+    // if (response === 'Movies already are saved') {
+    //   toast.success(response, {
+    //     icon: <BookmarkIcon className="w-5 h-6 text-yellow-300" />
+    //   })
+    // } else {
+    //   toast.success(response)
+    //   setTimeout(() => {
+    //     window.location.reload()
+    //   }, 500)
+    // }
+  }
 
   const fetchNextMoviesPage = async (page: number | string, limit: number) => {
     const nextMovies = await fetchSavedMovies(Number(page), limit)
@@ -76,7 +77,7 @@ const AllMoviesSection = () => {
           </button>
         </div>
 
-        {/* <Button onClick={fetchAndSaveGhibliMovies}>Get GhibliMovies</Button> */}
+        <Button onClick={fetchAndSaveNewMovies}>Get NewMovies</Button>
       </div>
 
       <Button
