@@ -79,6 +79,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data = await fetchMovieById(String(params?._id))
 
   return {
-    props: { data }
+    props: { data: data && data }
   }
 }
