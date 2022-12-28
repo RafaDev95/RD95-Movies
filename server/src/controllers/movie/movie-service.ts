@@ -57,6 +57,18 @@ class MovieService {
       throw new Error('Something unexpected happened. Please try again')
     }
   }
+
+  public async getMovieById(_id: string): Promise<Movie | null> {
+    try {
+      const movie = await this.Movie.findById(_id)
+
+      return movie
+    } catch (error) {
+      throw new Error(
+        'We found no movie with this ID. Please verify it and try again.'
+      )
+    }
+  }
 }
 
 export default MovieService

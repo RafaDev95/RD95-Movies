@@ -13,7 +13,7 @@ const Layout = ({
   pageIcon = '/film-icon.png'
 }: Props) => {
   return (
-    <main className="min-h-full flex items-center justify-center p-2 bg-slate-200">
+    <main className="min-h-screen flex items-center justify-center p-2 bg-slate-200">
       <Head>
         <title>{pageTitle}</title>
         <link rel="icon" href={pageIcon} />

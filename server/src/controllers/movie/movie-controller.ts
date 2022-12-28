@@ -51,13 +51,28 @@ class MovieController implements Controller {
     }
   }
 
+  private getMovieById = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<void> => {
+    try {
+      const movie = await this.MovieService.getMovieById(req.body)
+
+      res.status(200).json(movie)
+    } catch (error: any) {
+      next(new HttpException(400, error.message))
+    }
+  }
+
   private initRoutes(): void {
     this.router.post(
       `${this.path}/add`,
       validationMiddleware(movieValidate),
       this.saveMovie
     ),
-      this.router.get(`${this.path}/get-movies`, this.getMovies)
+      this.router.get(`${this.path}/get-movies`, this.getMovies),
+      this.router.post(`${this.path}/find/id`, this.getMovieById)
   }
 }
 

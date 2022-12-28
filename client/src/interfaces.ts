@@ -5,6 +5,8 @@ export interface Movie {
   description: string
   director: string
   producer: string
+  release_date: string
+  rt_score: string
 }
 
 export interface MovieResponse {

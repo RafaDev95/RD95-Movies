@@ -34,8 +34,7 @@ const Card = ({
           role="button"
           onClick={() =>
             route.push({
-              pathname: `/movie/${title.split(' ').join('-')}`,
-              query: { _id }
+              pathname: `/movie/${_id}`
             })
           }
         >
